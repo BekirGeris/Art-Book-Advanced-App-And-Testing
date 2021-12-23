@@ -20,7 +20,7 @@ class ArtDetailsFragment : Fragment(R.layout.fragment_art_details) {
 
 
         binding.artDetailImageView.setOnClickListener {
-
+            findNavController().navigate(ArtDetailsFragmentDirections.actionArtDetailsFragmentToImageApiFragment())
         }
 
         val callback = object : OnBackPressedCallback(true) {
