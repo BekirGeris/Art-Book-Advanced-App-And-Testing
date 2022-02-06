@@ -1,5 +1,6 @@
 package com.begers.artbooktesting.viewmodel
 
+import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -12,7 +13,7 @@ import kotlinx.coroutines.launch
 import java.lang.Exception
 import javax.inject.Inject
 
-class ArtViewModel @Inject constructor(
+class ArtViewModel @ViewModelInject constructor(
     private var repository: ArtRepositoryInterface
 ) : ViewModel() {
 

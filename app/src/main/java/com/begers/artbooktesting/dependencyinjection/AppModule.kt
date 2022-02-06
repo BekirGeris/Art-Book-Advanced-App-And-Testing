@@ -2,9 +2,15 @@ package com.begers.artbooktesting.dependencyinjection
 
 import android.content.Context
 import androidx.room.Room
+import com.begers.artbooktesting.R
 import com.begers.artbooktesting.api.RetrofitApi
+import com.begers.artbooktesting.repository.ArtRepository
+import com.begers.artbooktesting.repository.ArtRepositoryInterface
+import com.begers.artbooktesting.roomdb.ArtDao
 import com.begers.artbooktesting.roomdb.ArtDatabase
 import com.begers.artbooktesting.util.Constants.BASE_URL
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -34,10 +40,23 @@ object AppModule {
 
     @Singleton
     @Provides
-    fun injectRetrofitApi() : RetrofitApi {
+    fun injectRetrofitApi(): RetrofitApi {
         return Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create())
             .baseUrl(BASE_URL)
             .build().create(RetrofitApi::class.java)
     }
+
+    @Singleton
+    @Provides
+    fun injectNormalRepo(dao: ArtDao, api: RetrofitApi) = ArtRepository(dao, api) as ArtRepositoryInterface
+
+    @Singleton
+    @Provides
+    fun injectGlide(@ApplicationContext context: Context) = Glide
+        .with(context)
+        .setDefaultRequestOptions(
+            RequestOptions().placeholder(R.drawable.ic_launcher_foreground)
+                .error(R.drawable.ic_launcher_foreground)
+        )
 }
