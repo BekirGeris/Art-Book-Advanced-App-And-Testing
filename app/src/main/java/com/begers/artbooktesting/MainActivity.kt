@@ -2,7 +2,6 @@ package com.begers.artbooktesting
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.begers.artbooktesting.databinding.FragmentArtsBinding
 import com.begers.artbooktesting.view.ArtFragmentFactory
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject

@@ -5,7 +5,7 @@
       <map>
         <entry key="..\:/Users/bekir.geris/AndroidStudioProjects/ArtBookTesting/app/src/main/res/layout/art_row.xml" value="0.2421875" />
         <entry key="..\:/Users/bekir.geris/AndroidStudioProjects/ArtBookTesting/app/src/main/res/layout/fragment_art_details.xml" value="0.2421875" />
-        <entry key="..\:/Users/bekir.geris/AndroidStudioProjects/ArtBookTesting/app/src/main/res/layout/fragment_arts.xml" value="0.2421875" />
+        <entry key="..\:/Users/bekir.geris/AndroidStudioProjects/ArtBookTesting/app/src/main/res/layout/fragment_arts.xml" value="0.1" />
         <entry key="..\:/Users/bekir.geris/AndroidStudioProjects/ArtBookTesting/app/src/main/res/layout/fragment_image_api.xml" value="0.2421875" />
         <entry key="..\:/Users/bekir.geris/AndroidStudioProjects/ArtBookTesting/app/src/main/res/layout/image_row.xml" value="0.2421875" />
         <entry key="..\:/Users/bekirgeris/AndroidStudioProjects/ArtBookTesting/app/src/main/res/layout/activity_main.xml" value="0.21105072463768115" />
@@ -22,5 +22,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.1" />
+      </ProjectState>
+    </option>
   </component>
 </project>

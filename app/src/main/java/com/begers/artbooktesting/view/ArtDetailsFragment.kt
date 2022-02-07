@@ -12,7 +12,7 @@ import javax.inject.Inject
 
 class ArtDetailsFragment @Inject constructor(
     val glide: RequestManager
-): Fragment(R.layout.fragment_art_details) {
+) : Fragment(R.layout.fragment_art_details) {
 
     private var fragmentBinding: FragmentArtDetailsBinding? = null
 
@@ -21,7 +21,6 @@ class ArtDetailsFragment @Inject constructor(
 
         val binding = FragmentArtDetailsBinding.bind(view)
         fragmentBinding = binding
-
 
         binding.artDetailImageView.setOnClickListener {
             findNavController().navigate(ArtDetailsFragmentDirections.actionArtDetailsFragmentToImageApiFragment())
