@@ -13,6 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ArtBookTesting">
         <activity
+            android:windowActionBarOverlay="false"
+            android:windowSoftInputMode="stateHidden|adjustPan"
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
