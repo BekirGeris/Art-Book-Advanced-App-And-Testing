@@ -18,7 +18,7 @@ class ImageRecyclerAdapter @Inject constructor(
 
     class ImageViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
-    private var onItemClickListener : ((String) -> Unit) ?= null
+    private var onItemClickListener: ((String) -> Unit)? = null
 
     private val diffUtil = object : DiffUtil.ItemCallback<String>() {
         override fun areItemsTheSame(oldItem: String, newItem: String): Boolean {
@@ -48,12 +48,10 @@ class ImageRecyclerAdapter @Inject constructor(
 
         holder.itemView.apply {
             glide.load(url).into(imagesView)
-            setOnItemClickListener {
+            setOnClickListener {
                 onItemClickListener?.let {
                     it(url)
                 }
-
-
             }
         }
     }
@@ -62,7 +60,7 @@ class ImageRecyclerAdapter @Inject constructor(
         return images.size
     }
 
-    fun setOnItemClickListener(listener : (String) -> Unit){
+    fun setOnItemClickListener(listener: (String) -> Unit) {
         onItemClickListener = listener
     }
 }
