@@ -5,7 +5,7 @@ import com.begers.artbooktesting.MainCoroutineRule
 import com.begers.artbooktesting.getOrAwaitValueTest
 import com.begers.artbooktesting.repo.FakeArtRepostory
 import com.begers.artbooktesting.util.Status
-import com.google.common.truth.ExpectFailure.assertThat
+import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import org.junit.Before
 import org.junit.Rule
